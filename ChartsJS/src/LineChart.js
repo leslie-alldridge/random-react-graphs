@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Line } from "react-chartjs-2";
 
-class App extends Component {
+class LineChart extends Component {
   render() {
     const data = {
       labels: [
@@ -24,34 +23,19 @@ class App extends Component {
         {
           label: "Exercise Duration",
           data: [22, 19, 27, 23, 22, 24, 17, 25, 23, 24, 20, 19],
-          fill: true, // Don't fill area under the line
-          borderColor: "blue" // Line color
+          fill: true,
+          borderColor: "blue"
         }
       ]
     };
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <h1>this is a graph </h1>
-
+        <h1>This is a Line Chart</h1>
         <Line data={data} />
       </div>
     );
   }
 }
 
-export default App;
+export default LineChart;
